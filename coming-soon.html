@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Under Construction - The Music Makeover</title>
+  <link rel="icon" href="media/music-makeover-logo.png" type="image/png">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sen:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --warm-ivory: #F4EFE8;
+      --soft-sand: #DCCFC0;
+      --mushroom-taupe: #B7A693;
+      --deep-olive: #5B5D46;
+      --espresso-charcoal: #2E2926;
+      --muted-rose-gold: #B88473;
+      --dark-bg: #1A1816;
+      --glass-bg: rgba(255, 255, 255, 0.03);
+      --glass-border: rgba(255, 255, 255, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Sen", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--dark-bg);
+      background-image: 
+        radial-gradient(circle at 50% 25%, rgba(184, 132, 115, 0.15) 0%, transparent 60%),
+        radial-gradient(circle at 10% 80%, rgba(91, 93, 70, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 90% 80%, rgba(183, 166, 147, 0.08) 0%, transparent 50%);
+      color: var(--warm-ivory);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Decorative sound wave lines in background */
+    .bg-waves {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.03;
+      pointer-events: none;
+      z-index: 0;
+      background-image: repeating-linear-gradient(90deg, transparent, transparent 40px, var(--warm-ivory) 40px, var(--warm-ivory) 41px);
+      mask-image: radial-gradient(circle at 50% 50%, black 30%, transparent 70%);
+      -webkit-mask-image: radial-gradient(circle at 50% 50%, black 30%, transparent 70%);
+    }
+
+    header {
+      width: 100%;
+      max-width: 1200px;
+      padding: 40px 24px;
+      display: flex;
+      justify-content: center;
+      z-index: 10;
+      opacity: 0;
+      animation: fadeInDown 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    .logo-container img {
+      height: 90px;
+      width: auto;
+      filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
+      transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .logo-container img:hover {
+      transform: scale(1.05);
+    }
+
+    main {
+      flex: 1;
+      width: 100%;
+      max-width: 800px;
+      padding: 0 24px 60px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      z-index: 10;
+    }
+
+    .content-box {
+      opacity: 0;
+      animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+    }
+
+    h1 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 500;
+      line-height: 1.15;
+      margin-bottom: 16px;
+      color: #fff;
+    }
+
+    h1 span {
+      display: block;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      font-family: "Sen", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: var(--muted-rose-gold);
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    .tagline {
+      font-size: clamp(1rem, 1.8vw, 1.25rem);
+      color: var(--soft-sand);
+      max-width: 600px;
+      margin: 0 auto 48px auto;
+      line-height: 1.6;
+    }
+
+    /* Construction Container styling */
+    .construction-container {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-radius: 16px;
+      padding: clamp(24px, 5vw, 48px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+      max-width: 600px;
+      width: 100%;
+      margin: 0 auto 48px auto;
+      position: relative;
+      overflow: hidden;
+      opacity: 0;
+      animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .construction-container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, var(--muted-rose-gold), var(--mushroom-taupe));
+      opacity: 0.8;
+    }
+
+    .construction-container:hover {
+      transform: translateY(-4px);
+      border-color: rgba(184, 132, 115, 0.3);
+    }
+
+    .construction-msg {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      font-weight: 600;
+      color: #fff;
+      letter-spacing: 0.02em;
+    }
+
+    /* Form & Action Area */
+    .action-container {
+      opacity: 0;
+      animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards;
+      max-width: 500px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .email-prompt {
+      font-size: 0.95rem;
+      color: var(--soft-sand);
+      margin-bottom: 20px;
+    }
+
+    .contact-button {
+      display: inline-block;
+      background: var(--muted-rose-gold);
+      color: var(--espresso-charcoal);
+      text-decoration: none;
+      padding: 14px 32px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.05em;
+      box-shadow: 0 8px 24px rgba(184, 132, 115, 0.3);
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
+    }
+
+    .contact-button:hover {
+      background: transparent;
+      color: var(--warm-ivory);
+      border-color: var(--muted-rose-gold);
+      box-shadow: 0 8px 24px rgba(184, 132, 115, 0.1);
+      transform: translateY(-2px);
+    }
+
+    /* Footer styling */
+    footer {
+      width: 100%;
+      max-width: 1200px;
+      padding: 40px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      z-index: 10;
+      opacity: 0;
+      animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.8s forwards;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .social-links a {
+      color: var(--mushroom-taupe);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      transition: color 0.3s ease;
+    }
+
+    .social-links a:hover {
+      color: var(--muted-rose-gold);
+    }
+
+    .copyright {
+      font-size: 0.8rem;
+      color: rgba(244, 239, 232, 0.4);
+    }
+
+    /* Keyframes */
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsiveness adjustments */
+    @media (max-width: 480px) {
+      .construction-container {
+        padding: 24px 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bg-waves"></div>
+
+  <header>
+    <div class="logo-container">
+      <img src="media/music-makeover-logo.png" alt="The Music Makeover Logo">
+    </div>
+  </header>
+
+  <main>
+    <div class="content-box">
+      <h1>
+        <span>Under Construction</span>
+        Revive the Sound.<br>Restore the Purpose.
+      </h1>
+      <p class="tagline">
+        The Music Makeover is getting ready to launch a new experience designed to help voices grow, teams strengthen, and purpose come alive.
+      </p>
+    </div>
+
+    <!-- Under Construction Message -->
+    <div class="construction-container">
+      <div class="construction-msg">Site Under Construction</div>
+    </div>
+
+    <div class="action-container">
+      <p class="email-prompt">Need to get in touch before the launch?</p>
+      <a href="mailto:themusicmakeover@gmail.com" class="contact-button">Contact Ashley</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="social-links">
+      <a href="https://www.facebook.com/profile.php?id=61580252074616" target="_blank" rel="noopener noreferrer">Facebook</a>
+      <a href="https://www.instagram.com/themusicmakeover/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://www.tiktok.com/@theofficialmusicmakeover?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer">TikTok</a>
+      <a href="https://www.linkedin.com/in/ashley-miller-themusicmakeover/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </div>
+    <div class="copyright">
+      &copy; 2026 The Music Makeover. All rights reserved.
+    </div>
+  </footer>
+
+
+</body>
+
+</html>

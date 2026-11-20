@@ -1,0 +1,783 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Services - The Music Makeover</title>
+  <link rel="icon" href="media/music-makeover-logo.png" type="image/png">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/gsap-lite.js?v=homepage-animations"></script>
+  <script defer src="assets/site.js?v=homepage-animations"></script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">
+        <a href="index.html">
+          <img src="media/music-makeover-logo.png" alt="The Music Makeover">
+        </a>
+      </div>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav" aria-label="Primary">
+        <a href="about.html">ABOUT ME</a>
+        <a href="services.html">SERVICES</a>
+        <a href="booking.html">BOOKING</a>
+        <a href="testimonials.html">TESTIMONIALS</a>
+        <a href="contact.html">CONTACT</a>
+        <a href="#makeover-matchmaker" class="nav-quiz-btn">QUIZ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="content-page services-page-container">
+    <!-- Section 1: Services Hero -->
+    <section class="services-hero" aria-labelledby="services-hero-heading" data-gsap-section>
+      <div class="services-hero-copy" data-gsap="hero">
+        <span class="eyebrow">Services</span>
+        <h1 id="services-hero-heading">Services Designed to Meet You Where You Are</h1>
+        <p class="subheading">Coaching workshops and strategy for singers, students, worship teams, choirs, and music
+          programs ready to grow with clarity, confidence, and purpose.</p>
+        <p class="supporting-copy">Every singer, team, choir, and music program has different needs—and growth should
+          never feel one-size-fits-all. The Music Makeover offers customized support for individuals, families,
+          churches, schools, and organizations seeking meaningful musical growth.</p>
+        <div class="hero-actions" style="margin-top: 24px;">
+          <a class="hero-cta" href="booking.html?category=general">Find My Next Step</a>
+          <a class="hero-cta secondary" href="#makeover-matchmaker">Take the Growth Style Quiz</a>
+        </div>
+      </div>
+      <div class="services-hero-image" data-gsap="hero">
+        <img src="media/homepage-hero.jpeg" alt="Ashley Miller coaching a music group">
+        <div class="hero-image-overlay"></div>
+      </div>
+    </section>
+
+    <!-- Section 2: Start Here / Find Your Fit -->
+    <section class="journey-section" id="makeover-paths" aria-labelledby="paths-heading">
+      <div class="section-heading">
+        <h2 id="paths-heading">Choose Your Music Makeover Path</h2>
+        <p>Not every music need fits into the same box. Start with the path that best describes where you are then
+          explore the service options designed to help you move forward.</p>
+      </div>
+      <div class="fit-grid" data-gsap-stagger>
+        <a class="fit-card" href="#private-coaching">
+          <div class="fit-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"></path>
+              <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+              <line x1="12" y1="19" x2="12" y2="22"></line>
+            </svg>
+          </div>
+          <h3>Private Coaching</h3>
+          <p>Students, singers, musicians, and worship leaders</p>
+          <span class="fit-action-btn">Explore Coaching &rarr;</span>
+        </a>
+        <a class="fit-card" href="#worship-team">
+          <div class="fit-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <h3>Worship Team Makeover</h3>
+          <p>Churches, praise teams, vocal teams, and volunteer musicians</p>
+          <span class="fit-action-btn">Explore Worship Support &rarr;</span>
+        </a>
+        <a class="fit-card" href="#choir-coaching">
+          <div class="fit-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M9 18V5l12-2v13"></path>
+              <circle cx="6" cy="18" r="3"></circle>
+              <circle cx="18" cy="16" r="3"></circle>
+            </svg>
+          </div>
+          <h3>Choir & Ensemble Coaching</h3>
+          <p>School choirs, church choirs, ensembles, and vocal groups</p>
+          <span class="fit-action-btn">Explore Choir Coaching &rarr;</span>
+        </a>
+        <a class="fit-card" href="#intensives">
+          <div class="fit-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+            </svg>
+          </div>
+          <h3>Music Makeover Intensives</h3>
+          <p>Leaders, schools, churches, organizations, and developing programs</p>
+          <span class="fit-action-btn">Explore Intensives &rarr;</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Section 3: Private Music Coaching -->
+    <section class="service-detail-section" id="private-coaching" aria-labelledby="private-heading" data-gsap-section>
+      <div class="service-media">
+        <img src="media/private-music-coaching.JPG" alt="One-on-one private vocal coaching with Ashley Miller">
+        <div class="service-graphic-badge">
+          <!-- Microphone / Note Icon SVG -->
+          <svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor">
+            <path
+              d="M12 2c-1.66 0-3 1.34-3 3v6c0 1.66 1.34 3 3 3s3-1.34 3-3V5c0-1.66-1.34-3-3-3zm7 9c0 3.53-2.61 6.43-6 6.92V21h-2v-3.08c-3.39-.49-6-3.39-6-6.92h2c0 3.31 2.69 6 6 6s6-2.69 6-6h2z" />
+          </svg>
+          <span>One-on-One Support</span>
+        </div>
+      </div>
+      <div class="service-info-panel">
+        <span class="service-label">Individual Coaching</span>
+        <h2 id="private-heading">Private Music Coaching</h2>
+        <p class="service-tagline">Personalized coaching for singers, students, musicians, and worship leaders ready to
+          grow with confidence.</p>
+        <p class="service-description">Private music coaching provides one-on-one support for individuals who want to
+          strengthen their voice, build musical understanding, prepare for performances, or grow with consistent,
+          intentional guidance.</p>
+        <p class="service-description">Sessions are customized based on the student’s age, experience level, goals, and
+          current needs. Coaching may include vocal technique, musicianship, ear training, audition preparation,
+          performance confidence, worship leading support, or foundational music skills.</p>
+
+        <div class="service-meta-lists">
+          <div class="meta-list-block">
+            <h3>Best For</h3>
+            <ul class="best-for-list">
+              <li>Beginner students</li>
+              <li>Developing singers</li>
+              <li>Audition preparation</li>
+              <li>Performance preparation</li>
+              <li>Worship leaders</li>
+              <li>Confidence-building</li>
+              <li>Weekly or monthly musical growth</li>
+            </ul>
+          </div>
+          <div class="pricing-card-accent">
+            <span class="investment-label">Starting Investment</span>
+            <span class="investment-price">$40</span>
+            <p class="investment-note">Monthly coaching packages may be available for students or singers seeking
+              consistent growth.</p>
+            <div class="service-ctas">
+              <a class="hero-cta" href="booking.html?category=private">Book Private Coaching</a>
+              <a class="secondary-link" href="contact.html">Ask a Question &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Worship Team Makeover -->
+    <section class="service-detail-section alt-layout" id="worship-team" aria-labelledby="worship-heading"
+      data-gsap-section>
+      <div class="service-info-panel">
+        <span class="service-label">Churches & Teams</span>
+        <h2 id="worship-heading">Worship Team Makeover</h2>
+        <p class="service-tagline">Support for worship teams ready to strengthen their sound, structure, confidence, and
+          culture.</p>
+        <p class="service-description">The Worship Team Makeover is designed for churches, worship teams, praise teams,
+          vocalists, and volunteer musicians who need practical support and intentional development.</p>
+        <p class="service-description">This service helps teams strengthen vocals, improve blend, clarify expectations,
+          support rehearsal flow, build confidence, and create a healthier team experience. Coaching may include vocal
+          workshops, rehearsal observation, team training, harmony development, worship leading support, and customized
+          next steps.</p>
+
+        <div class="service-meta-lists">
+          <div class="meta-list-block">
+            <h3>Best For</h3>
+            <ul class="best-for-list">
+              <li>Worship teams & praise teams</li>
+              <li>Church vocalists & volunteer musicians</li>
+              <li>Worship leaders needing structural flow</li>
+              <li>Churches needing stronger rehearsal structure</li>
+              <li>Teams needing confidence, blend, or unity</li>
+            </ul>
+          </div>
+          <div class="pricing-card-accent">
+            <span class="investment-label">Starting Investment</span>
+            <span class="investment-price">$500</span>
+            <p class="investment-note">Includes custom vocal team coaching, harmony development, rehearsal flow support,
+              and culture consulting.</p>
+            <div class="service-ctas">
+              <a class="hero-cta" href="booking.html?category=worship">Request Worship Support</a>
+              <a class="secondary-link" href="#makeover-matchmaker">Take the Growth Style Quiz &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="service-media">
+        <img src="media/worship-team.JPG" alt="Ashley Miller working with a worship team">
+        <div class="service-graphic-badge">
+          <!-- Sound wave / Team SVG -->
+          <svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor">
+            <path
+              d="M12 3v18c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 2c3.87 0 7 3.13 7 7s-3.13 7-7 7V5zM4 9h2v6H4V9zm3-2h2v10H7V7z" />
+          </svg>
+          <span>Team Development</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Choir & Ensemble Coaching -->
+    <section class="service-detail-section" id="choir-coaching" aria-labelledby="choir-heading" data-gsap-section>
+      <div class="service-media">
+        <video autoplay muted loop playsinline preload="metadata" poster="media/intensive.JPG">
+          <source src="media/music-makeover-cropped.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <!-- Optional Mini Testimonial Sidebar -->
+        <blockquote class="mini-testimonial-sidebar">
+          <p>“This training has been by far the most useful, amazing, and detailed training I’ve ever had.”</p>
+          <cite>— Workshop Participant, <span>Choir Member</span></cite>
+        </blockquote>
+      </div>
+      <div class="service-info-panel">
+        <span class="service-label">Choirs & Ensembles</span>
+        <h2 id="choir-heading">Choir & Ensemble Coaching</h2>
+        <p class="service-tagline">Interactive coaching for choirs and vocal groups ready to improve sound, unity, and
+          performance readiness.</p>
+        <p class="service-description">Choir & Ensemble Coaching provides practical, engaging workshops and clinics for
+          school choirs, church choirs, ensembles, praise teams, and vocal groups.</p>
+        <p class="service-description">Sessions are designed to help groups improve tone, blend, articulation, dynamics,
+          musicianship, confidence, and overall performance readiness. Coaching is customized based on the ensemble’s
+          current level, repertoire, goals, and upcoming events.</p>
+
+        <div class="service-meta-lists">
+          <div class="meta-list-block">
+            <h3>Best For</h3>
+            <ul class="best-for-list">
+              <li>School & church choirs</li>
+              <li>Vocal ensembles & small groups</li>
+              <li>Concert & festival preparation</li>
+              <li>Tone, blend, and articulation development</li>
+            </ul>
+          </div>
+          <div class="pricing-card-accent">
+            <span class="investment-label">Starting Investment</span>
+            <span class="investment-price">$350</span>
+            <p class="investment-note">Includes tone/blend clinics, vowel shaping, diction support, and
+              performance-ready exercises.</p>
+            <div class="service-ctas">
+              <a class="hero-cta" href="booking.html?category=ensemble">Request Choir Coaching</a>
+              <a class="secondary-link" href="testimonials.html">View Testimonials &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Music Makeover Intensives -->
+    <section class="service-detail-section alt-layout" id="intensives" aria-labelledby="intensives-heading"
+      data-gsap-section>
+      <div class="service-info-panel">
+        <span class="service-label">Programs & Leaders</span>
+        <h2 id="intensives-heading">Music Makeover Intensives</h2>
+        <p class="service-tagline">Strategic coaching and consulting for leaders and programs ready for deeper growth.
+        </p>
+        <p class="service-description">Music Makeover Intensives are designed for schools, churches, organizations,
+          music leaders, worship pastors, choir directors, and developing programs that need more than a single coaching
+          session.</p>
+        <p class="service-description">These intensives help leaders assess what is working, identify what needs
+          support, and create a customized growth plan. Depending on the need, support may include program assessment,
+          rehearsal systems, curriculum direction, leadership coaching, team development, communication structure, and
+          long-term strategy.</p>
+
+        <div class="service-meta-lists">
+          <div class="meta-list-block">
+            <h3>Best For</h3>
+            <ul class="best-for-list">
+              <li>Program resets & custom consulting</li>
+              <li>Leadership support & worship ministry resets</li>
+              <li>Developing school/church music departments</li>
+              <li>Rehearsal systems & multi-step growth plans</li>
+            </ul>
+          </div>
+          <div class="pricing-card-accent">
+            <span class="investment-label">Starting Investment</span>
+            <span class="investment-price">$1,250</span>
+            <p class="investment-note">Includes intake, observation, custom strategy plan, written recommendations, and
+              follow-up support.</p>
+            <div class="service-ctas">
+              <a class="hero-cta" href="booking.html?category=school">Plan an Intensive</a>
+              <a class="secondary-link" href="booking.html?category=school">Start with a Quick Fix Assessment &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="service-media">
+        <img src="media/intensive.JPG" alt="Ashley Miller consulting with a music leader">
+        <div class="service-graphic-badge">
+          <!-- Compass / Blueprint SVG -->
+          <svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor">
+            <path
+              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+          </svg>
+          <span>Strategic Consulting</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 7: Program Support Options -->
+    <section class="journey-section support-options-section" aria-labelledby="options-heading">
+      <div class="section-heading">
+        <h2 id="options-heading">Programs Support Options</h2>
+        <p>These request-first services are designed for leaders, schools, churches, and organizations that need
+          customized support. Ashley reviews each inquiry before confirming the best service option, scope, timeline,
+          and next steps.</p>
+      </div>
+      <div class="support-options-grid" data-gsap-stagger>
+        <article class="support-option-card">
+          <div class="card-header">
+            <h3>Quick Fix Assessment</h3>
+            <span class="option-price">$350</span>
+          </div>
+          <p class="option-best"><strong>Best For:</strong> Leaders needing targeted feedback and clarity.</p>
+          <p class="option-process"><strong>Process:</strong> Available after inquiry review.</p>
+        </article>
+        <article class="support-option-card">
+          <div class="card-header">
+            <h3>Music Educator Makeover</h3>
+            <span class="option-price">$750</span>
+          </div>
+          <p class="option-best"><strong>Best For:</strong> Music educators needing support, strategy, or planning help.
+          </p>
+          <p class="option-process"><strong>Process:</strong> Scope and dates approved before booking.</p>
+        </article>
+        <article class="support-option-card">
+          <div class="card-header">
+            <h3>Music Makeover Intensive</h3>
+            <span class="option-price">$1,250+</span>
+          </div>
+          <p class="option-best"><strong>Best For:</strong> Programs needing deeper strategy, systems, and support.</p>
+          <p class="option-process"><strong>Process:</strong> Consultation may be recommended.</p>
+        </article>
+        <article class="support-option-card">
+          <div class="card-header">
+            <h3>Full Program Makeover</h3>
+            <span class="option-price">$3,000+</span>
+          </div>
+          <p class="option-best"><strong>Best For:</strong> Schools, churches, and organizations needing full-scale
+            support.</p>
+          <p class="option-process"><strong>Process:</strong> Custom proposal required.</p>
+        </article>
+      </div>
+      <p class="pricing-disclaimer-note">*Pricing may vary depending on session length, location, preparation needs,
+        travel, program scope, and level of customization.</p>
+    </section>
+
+    <!-- Section 8: Why The Music Makeover? -->
+    <section class="journey-section why-makeover-feature" aria-labelledby="why-makeover-heading" data-gsap-section>
+      <div class="why-makeover-content">
+        <h2 id="why-makeover-heading">Why The Music Makeover?</h2>
+        <p class="intro-description">The goal is not just to improve sound. The goal is to strengthen people, support
+          leaders, build confidence, and create healthier music experiences that last.</p>
+
+        <ul class="why-checklist" data-gsap-stagger>
+          <li>High standards without intimidation</li>
+          <li>Personalized, practical coaching</li>
+          <li>Strong musical and leadership insight</li>
+          <li>Support rooted in confidence and purpose</li>
+          <li>A developmental approach that creates lasting growth</li>
+          <li>Flexible coaching and consulting packages</li>
+          <li>Strategy that supports both sound and structure</li>
+        </ul>
+      </div>
+      <div class="why-makeover-quote-block">
+        <blockquote class="pull-quote">
+          “Growth should be excellent, intentional, and personal.”
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- Section 9: Pricing Overview -->
+    <section class="journey-section pricing-overview-section" aria-labelledby="starting-investment-heading">
+      <div class="section-heading">
+        <h2 id="starting-investment-heading">Choose the support that fits your next step</h2>
+        <p>Whether you need one-on-one vocal coaching, a workshop for your team, or a deeper program makeover, Ashley will help you find the right level of support for your goals, timeline, and season.</p>
+      </div>
+
+      <div class="pricing-cards-container">
+        
+        <!-- Card 1: Private Coaching -->
+        <article class="pricing-card">
+          <div class="pricing-card-header">
+            <span class="pricing-card-eyebrow">For Individual Singers</span>
+            <h3 class="pricing-card-title">Private Coaching</h3>
+            <p class="pricing-card-desc">Focused vocal support for singers who want to grow in tone, confidence, technique, and consistency.</p>
+          </div>
+          <div class="pricing-card-price-box">
+            <span class="price-prefix">Sessions start at</span>
+            <span class="price-amount">$40</span>
+          </div>
+          <div class="pricing-card-divider"></div>
+          <ul class="pricing-card-features">
+            <li>
+              <span class="feature-name">30-minute session</span>
+              <span class="feature-price">$40</span>
+            </li>
+            <li>
+              <span class="feature-name">45-minute session</span>
+              <span class="feature-price">$65</span>
+            </li>
+            <li>
+              <span class="feature-name">60-minute session</span>
+              <span class="feature-price">$85</span>
+            </li>
+            <li>
+              <span class="feature-name">Monthly 4-pack, 45-min</span>
+              <span class="feature-price">$250</span>
+            </li>
+            <li>
+              <span class="feature-name">Monthly 4-pack, 60-min</span>
+              <span class="feature-price">$325</span>
+            </li>
+          </ul>
+          <div class="pricing-card-footer">
+            <a href="booking.html?category=private" class="pricing-card-cta">Book Private Coaching</a>
+          </div>
+        </article>
+
+        <!-- Card 2: Workshops & Team Support -->
+        <article class="pricing-card">
+          <div class="pricing-card-header">
+            <span class="pricing-card-eyebrow">For Teams, Choirs & Educators</span>
+            <h3 class="pricing-card-title">Workshops & Team Support</h3>
+            <p class="pricing-card-desc">Hands-on support for worship teams, choirs, ensembles, and music educators who need vocal direction, group growth, and a clearer rehearsal path.</p>
+          </div>
+          <div class="pricing-card-price-box">
+            <span class="price-prefix">Starting at</span>
+            <span class="price-amount">$350+</span>
+          </div>
+          <div class="pricing-card-divider"></div>
+          <ul class="pricing-card-features">
+            <li>
+              <span class="feature-name">Vocal Boost Workshop</span>
+              <span class="feature-price">$350+</span>
+            </li>
+            <li>
+              <span class="feature-name">Worship Team Makeover</span>
+              <span class="feature-price">$500</span>
+            </li>
+            <li>
+              <span class="feature-name">Team Makeover Session</span>
+              <span class="feature-price">$500–$850</span>
+            </li>
+            <li>
+              <span class="feature-name">Music Educator Makeover</span>
+              <span class="feature-price">$750</span>
+            </li>
+          </ul>
+          <div class="pricing-card-footer">
+            <a href="booking.html?category=worship" class="pricing-card-cta">Request Workshop Support</a>
+          </div>
+        </article>
+
+        <!-- Card 3: Program Makeovers -->
+        <article class="pricing-card">
+          <div class="pricing-card-header">
+            <span class="pricing-card-eyebrow">For Deeper Transformation</span>
+            <h3 class="pricing-card-title">Program Makeovers</h3>
+            <p class="pricing-card-desc">Strategic support for leaders who need help strengthening the sound, structure, confidence, culture, and direction of their music program.</p>
+          </div>
+          <div class="pricing-card-price-box">
+            <span class="price-prefix">Starting at</span>
+            <span class="price-amount">$1,250+</span>
+          </div>
+          <div class="pricing-card-divider"></div>
+          <ul class="pricing-card-features">
+            <li>
+              <span class="feature-name">Quick Fix Assessment</span>
+              <span class="feature-price">$350</span>
+            </li>
+            <li>
+              <span class="feature-name">Music Makeover Intensive</span>
+              <span class="feature-price">$1,250+</span>
+            </li>
+            <li>
+              <span class="feature-name">4-Week Makeover Series</span>
+              <span class="feature-price">$1,500+</span>
+            </li>
+            <li>
+              <span class="feature-name">Full Program Makeover</span>
+              <span class="feature-price">$3,000+</span>
+            </li>
+          </ul>
+          <div class="pricing-card-footer">
+            <a href="booking.html?category=school" class="pricing-card-cta">Plan a Program Makeover</a>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Expandable Pricing Notes Toggle -->
+      <div class="pricing-notes-toggle-wrapper">
+        <button type="button" class="pricing-notes-toggle-btn" aria-expanded="false" aria-controls="pricing-notes-details">
+          <span>View detailed pricing notes</span>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div id="pricing-notes-details" class="pricing-notes-content" hidden>
+          <p>Final pricing may vary depending on session length, location, preparation needs, travel, program size, materials, and level of customization. Custom workshops, intensives, and program support may require a proposal after Ashley reviews your goals and timeline.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="journey-section quiz-section" id="makeover-matchmaker" aria-labelledby="quiz-heading"
+      data-matchmaker-quiz data-gsap-section>
+      <div class="quiz-copy" data-gsap-section>
+        <h2 id="quiz-heading">Not sure where to start?</h2>
+        <p>Take the Music Makeover Matchmaker quiz and discover the support path that fits your current needs.</p>
+        <a class="hero-cta" href="#matchmaker-options" data-quiz-start-btn>Take the Quiz</a>
+      </div>
+      <div class="quiz-panel" id="matchmaker-options" data-gsap-section>
+
+        <!-- Step 1: Seek support for -->
+        <div class="quiz-step active" data-quiz-step="1">
+          <div class="quiz-progress-bar"><span style="width: 14.3%"></span></div>
+          <p class="quiz-progress-text">Question 1 of 7</p>
+          <h3 class="quiz-question">Who are you seeking support for?</h3>
+          <div class="quiz-options">
+            <button type="button" class="quiz-opt" data-option="a" data-points="confidence">Myself or my child</button>
+            <button type="button" class="quiz-opt" data-option="b" data-points="team">A worship team</button>
+            <button type="button" class="quiz-opt" data-option="c" data-points="sound">A choir or ensemble</button>
+            <button type="button" class="quiz-opt" data-option="d" data-points="program">A school/church music
+              program</button>
+            <button type="button" class="quiz-opt" data-option="e" data-points="purpose">I’m not totally sure
+              yet</button>
+          </div>
+        </div>
+
+        <!-- Step 2: Biggest challenge -->
+        <div class="quiz-step" data-quiz-step="2" style="display: none;">
+          <div class="quiz-progress-bar"><span style="width: 28.6%"></span></div>
+          <p class="quiz-progress-text">Question 2 of 7</p>
+          <h3 class="quiz-question">What feels like the biggest challenge right now?</h3>
+          <div class="quiz-options">
+            <button type="button" class="quiz-opt" data-option="a" data-points="confidence">Confidence</button>
+            <button type="button" class="quiz-opt" data-option="b" data-points="confidence">Vocal technique</button>
+            <button type="button" class="quiz-opt" data-option="c" data-points="sound">Blend or group sound</button>
+            <button type="button" class="quiz-opt" data-option="d" data-points="team">Rehearsal structure</button>
+            <button type="button" class="quiz-opt" data-option="e" data-points="program">Leadership/program
+              direction</button>
+            <button type="button" class="quiz-opt" data-option="f" data-points="purpose">Motivation or
+              engagement</button>
+          </div>
+          <div class="quiz-nav">
+            <button type="button" class="mm-ghost-button" data-quiz-prev>Back</button>
+          </div>
+        </div>
+
+        <!-- Step 3: Wish felt stronger -->
+        <div class="quiz-step" data-quiz-step="3" style="display: none;">
+          <div class="quiz-progress-bar"><span style="width: 42.9%"></span></div>
+          <p class="quiz-progress-text">Question 3 of 7</p>
+          <h3 class="quiz-question">What do you wish felt stronger?</h3>
+          <div class="quiz-options">
+            <button type="button" class="quiz-opt" data-option="a" data-points="confidence">Individual skill</button>
+            <button type="button" class="quiz-opt" data-option="b" data-points="team">Team unity</button>
+            <button type="button" class="quiz-opt" data-option="c" data-points="sound">Musical excellence</button>
+            <button type="button" class="quiz-opt" data-option="d" data-points="team">Rehearsal flow</button>
+            <button type="button" class="quiz-opt" data-option="e" data-points="purpose">Purpose and direction</button>
+            <button type="button" class="quiz-opt" data-option="f" data-points="program">All of the above,
+              honestly</button>
+          </div>
+          <div class="quiz-nav">
+            <button type="button" class="mm-ghost-button" data-quiz-prev>Back</button>
+          </div>
+        </div>
+
+        <!-- Step 4: Vibe description -->
+        <div class="quiz-step" data-quiz-step="4" style="display: none;">
+          <div class="quiz-progress-bar"><span style="width: 57.1%"></span></div>
+          <p class="quiz-progress-text">Question 4 of 7</p>
+          <h3 class="quiz-question">How would you describe the current vibe?</h3>
+          <div class="quiz-options">
+            <button type="button" class="quiz-opt" data-option="a" data-points="confidence">We have potential but need
+              confidence</button>
+            <button type="button" class="quiz-opt" data-option="b" data-points="sound">We sound okay but need
+              polish</button>
+            <button type="button" class="quiz-opt" data-option="c" data-points="team">We are faithful but
+              scattered</button>
+            <button type="button" class="quiz-opt" data-option="d" data-points="program">We are overwhelmed and need
+              structure</button>
+            <button type="button" class="quiz-opt" data-option="e" data-points="purpose">We need a full reset</button>
+          </div>
+          <div class="quiz-nav">
+            <button type="button" class="mm-ghost-button" data-quiz-prev>Back</button>
+          </div>
+        </div>
+
+        <!-- Step 5: Helpful support -->
+        <div class="quiz-step" data-quiz-step="5" style="display: none;">
+          <div class="quiz-progress-bar"><span style="width: 71.4%"></span></div>
+          <p class="quiz-progress-text">Question 5 of 7</p>
+          <h3 class="quiz-question">What kind of support sounds most helpful?</h3>
+          <div class="quiz-options">
+            <button type="button" class="quiz-opt" data-option="a" data-points="confidence">One-on-one coaching</button>
+            <button type="button" class="quiz-opt" data-option="b" data-points="sound">A workshop or clinic</button>
+            <button type="button" class="quiz-opt" data-option="c" data-points="team">A team training session</button>
+            <button type="button" class="quiz-opt" data-option="d" data-points="program">A strategy session</button>
+            <button type="button" class="quiz-opt" data-option="e" data-points="program">A full customized plan</button>
+          </div>
+          <div class="quiz-nav">
+            <button type="button" class="mm-ghost-button" data-quiz-prev>Back</button>
+          </div>
+        </div>
+
+        <!-- Step 6: How soon -->
+        <div class="quiz-step" data-quiz-step="6" style="display: none;">
+          <div class="quiz-progress-bar"><span style="width: 85.7%"></span></div>
+          <p class="quiz-progress-text">Question 6 of 7</p>
+          <h3 class="quiz-question">How soon do you need support?</h3>
+          <div class="quiz-options">
+            <button type="button" class="quiz-opt" data-option="a" data-points="program">ASAP</button>
+            <button type="button" class="quiz-opt" data-option="b" data-points="sound">Within the next month</button>
+            <button type="button" class="quiz-opt" data-option="c" data-points="confidence">This
+              semester/season</button>
+            <button type="button" class="quiz-opt" data-option="d" data-points="team">Before a specific event</button>
+            <button type="button" class="quiz-opt" data-option="e" data-points="purpose">I’m exploring options</button>
+          </div>
+          <div class="quiz-nav">
+            <button type="button" class="mm-ghost-button" data-quiz-prev>Back</button>
+          </div>
+        </div>
+
+        <!-- Step 7: Win result -->
+        <div class="quiz-step" data-quiz-step="7" style="display: none;">
+          <div class="quiz-progress-bar"><span style="width: 100%"></span></div>
+          <p class="quiz-progress-text">Question 7 of 7</p>
+          <h3 class="quiz-question">What result would feel like a win?</h3>
+          <div class="quiz-options">
+            <button type="button" class="quiz-opt" data-option="a" data-points="confidence">More confidence</button>
+            <button type="button" class="quiz-opt" data-option="b" data-points="sound">Better sound</button>
+            <button type="button" class="quiz-opt" data-option="c" data-points="program">Stronger leadership</button>
+            <button type="button" class="quiz-opt" data-option="d" data-points="purpose">Clearer next steps</button>
+            <button type="button" class="quiz-opt" data-option="e" data-points="team">A healthier, more prepared music
+              experience</button>
+          </div>
+          <div class="quiz-nav">
+            <button type="button" class="mm-ghost-button" data-quiz-prev>Back</button>
+          </div>
+        </div>
+
+        <!-- Step 8: Loading Screen -->
+        <div class="quiz-step quiz-loading-step" data-quiz-step="loading" style="display: none;">
+          <div class="quiz-spinner"></div>
+          <p>Analyzing your music needs...</p>
+        </div>
+
+        <!-- Step 9: Results Card -->
+        <div class="quiz-step quiz-result-step" data-quiz-step="result" style="display: none;">
+          <div class="quiz-result-card">
+            <span class="result-badge">Your Music Makeover Stage</span>
+            <h3 data-quiz-result-title>Result Title</h3>
+            <p data-quiz-result-summary>Result Summary</p>
+            <div class="result-next-step-box">
+              <strong>Recommended Next Step:</strong>
+              <span data-quiz-result-step>Recommended step</span>
+            </div>
+            <div class="result-actions">
+              <a href="#" class="mm-button" data-quiz-result-cta>Book Private Coaching</a>
+              <button type="button" class="mm-ghost-button" data-quiz-restart>Retake Quiz</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section 10: Not Sure Where to Start? -->
+    <section class="journey-section not-sure-cta-section" aria-labelledby="not-sure-heading" data-gsap-section>
+      <div class="not-sure-cta-content">
+        <h2 id="not-sure-heading">Not Sure Which Service Fits?</h2>
+        <p>This is exactly what the inquiry process is for. If you know you need support but are not sure which service
+          is the best fit, start with a general inquiry or take the Growth Style Quiz.</p>
+        <p>Ashley will review your goals, challenges, timeline, and service needs, then recommend the next best step.
+        </p>
+        <div class="not-sure-buttons">
+          <a class="hero-cta" href="booking.html?category=general">Find My Next Step</a>
+          <a class="hero-cta secondary" href="#makeover-matchmaker">Take the Growth Style Quiz</a>
+          <a class="hero-cta secondary" href="contact.html">Contact Ashley</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="contact-footer">
+    <div class="inner">
+      <div class="footer-top-grid">
+        <div class="footer-brand">
+          <img class="footer-logo" src="media/music-makeover-logo.png" alt="The Music Makeover Logo">
+          <p class="footer-tagline">Revive the Sound. Restore the Purpose.</p>
+          <p class="footer-contact-info">
+            <span>Missouri, USA</span>
+            <span>Email: <a href="mailto:themusicmakeover@gmail.com"
+                data-contact-email>themusicmakeover@gmail.com</a></span>
+          </p>
+        </div>
+        <div class="footer-links-col">
+          <h4>Quick Links</h4>
+          <nav class="footer-nav">
+            <a href="about.html">About Me</a>
+            <a href="services.html">Services</a>
+            <a href="booking.html">Booking</a>
+            <a href="testimonials.html">Testimonials</a>
+            <a href="contact.html">Contact</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms-of-use.html">Terms of Use</a>
+            <a href="refund-policy.html">Refund Policy</a>
+          </nav>
+        </div>
+        <div class="footer-social-col">
+          <h4>Follow Along</h4>
+          <div class="footer-social-links">
+            <a href="https://www.facebook.com/profile.php?id=61580252074616" target="_blank" rel="noopener noreferrer"
+              data-content-href="contact.facebookUrl">Facebook</a>
+            <a href="https://www.instagram.com/themusicmakeover/" target="_blank" rel="noopener noreferrer"
+              data-content-href="contact.instagramUrl">Instagram</a>
+            <a href="https://www.tiktok.com/@theofficialmusicmakeover?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer"
+              data-content-href="contact.tiktokUrl">TikTok</a>
+            <a href="https://www.linkedin.com/in/ashley-miller-themusicmakeover/" target="_blank"
+              rel="noopener noreferrer" data-content-href="contact.linkedinUrl">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+      <hr class="footer-divider">
+      <div class="footer-bottom">
+        <p>&copy; 2026 The Music Makeover. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const header = document.querySelector('.header');
+    const apply = () => {
+      if (window.scrollY > 10) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
+    };
+    if (window.gsap && window.ScrollTrigger) {
+      gsap.registerPlugin(ScrollTrigger);
+      ScrollTrigger.create({ start: 10, onEnter: () => header.classList.add('scrolled'), onLeaveBack: () => header.classList.remove('scrolled') });
+    } else {
+      window.addEventListener('scroll', apply, { passive: true });
+      apply();
+    }
+
+    // Pricing notes toggle
+    const toggleBtn = document.querySelector('.pricing-notes-toggle-btn');
+    const toggleDetails = document.getElementById('pricing-notes-details');
+    if (toggleBtn && toggleDetails) {
+      toggleBtn.addEventListener('click', () => {
+        const expanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+        toggleBtn.setAttribute('aria-expanded', !expanded);
+        toggleDetails.hidden = expanded;
+      });
+    }
+  </script>
+</body>
+
+</html>

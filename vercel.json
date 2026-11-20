@@ -1,0 +1,52 @@
+{
+  "version": 2,
+  "name": "ashleymillerlifecoach",
+  "cleanUrls": true,
+  "buildCommand": "node scripts/build-site.js",
+  "outputDirectory": "public",
+  "rewrites": [
+    {
+      "source": "/rooted-women/peace-promise",
+      "destination": "/the-peace-promise.html"
+    },
+    {
+      "source": "/privacy",
+      "destination": "/privacy-policy.html"
+    },
+    {
+      "source": "/terms",
+      "destination": "/terms-of-use.html"
+    },
+    {
+      "source": "/refunds",
+      "destination": "/refund-policy.html"
+    },
+    {
+      "source": "/booking",
+      "destination": "/book.html"
+    },
+    {
+      "source": "/services",
+      "destination": "/coaching.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+node_modules/
+.vercel
+test-results/
+playwright-report/
+screenshots/
+tmp/
+.env*
+!.env.example
+public/

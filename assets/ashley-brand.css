@@ -1,0 +1,808 @@
+/* ==========================================================================
+   Ashley Miller Life Coach - Brand System & Two Color Worlds
+   ========================================================================== */
+
+:root {
+  /* Site Shell (Base) Palette */
+  --shell-cream: #F4EFE8;
+  --shell-sand: #DCCFC0;
+  --shell-taupe: #B7A693;
+  --shell-olive: #5B5D46;
+  --shell-black: #1A1A1A;
+  --shell-rose-gold: #B88473;
+  --shell-white: #FFFFFF;
+
+  /* No Permission Slip World (Classroom / Bright) */
+  --nps-pink-tint: #FDE4F0;
+  --nps-teal: #14A3A8;
+  --nps-magenta: #E0218A;
+  --nps-purple: #7B2CBF;
+  --nps-purple-light: #F4EEFB;
+  --nps-chalkboard: #1C2D27;
+
+  /* Rooted Women Collective World (Elevated / Soft) */
+  --rooted-cream: #F7F1E8;
+  --rooted-blush: #E8C4BE;
+  --rooted-olive: #6B7046;
+  --rooted-black: #1A1A1A;
+  --rooted-gold: #C2A268;
+}
+
+/* Base Body Font adjustments */
+body {
+  font-family: 'Sen', 'Montserrat', system-ui, -apple-system, sans-serif;
+  color: var(--shell-black);
+  background-color: var(--shell-cream);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, .serif-font {
+  font-family: 'Sen', Georgia, serif;
+  font-weight: 700;
+  color: var(--shell-black);
+}
+
+/* Logo Styling */
+.header .logo a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.logo-monogram {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--shell-black);
+  color: var(--shell-cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Sen', Georgia, serif;
+  font-weight: 800;
+  font-size: 19px;
+  letter-spacing: -0.5px;
+  border: 1px solid var(--shell-taupe);
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-name {
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--shell-black);
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+
+.logo-tagline {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  color: var(--shell-olive);
+  text-transform: uppercase;
+}
+
+/* Nav Book a Call Button */
+.nav .nav-book-btn {
+  background: var(--shell-olive) !important;
+  color: #fff !important;
+  padding: 9px 18px !important;
+  box-shadow: 0 2px 10px rgba(91, 93, 70, 0.25);
+  transition: all 0.2s ease;
+}
+
+.nav .nav-book-btn:hover {
+  background: var(--shell-black) !important;
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   Home Hero Enhancements
+   ========================================================================== */
+.hero-content h1 {
+  font-size: clamp(32px, 4.5vw, 54px);
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+
+.hero-content p {
+  font-size: clamp(16px, 2vw, 20px);
+  line-height: 1.5;
+  max-width: 640px;
+  margin-bottom: 28px;
+}
+
+.hero-actions .hero-cta.primary {
+  background: var(--shell-olive);
+  color: #fff;
+  border: none;
+}
+
+.hero-actions .hero-cta.primary:hover {
+  background: var(--shell-black);
+  color: #fff;
+}
+
+.hero-actions .hero-cta.secondary {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--shell-black);
+  border: 1px solid var(--shell-taupe);
+}
+
+.hero-actions .hero-cta.secondary:hover {
+  background: #fff;
+  border-color: var(--shell-black);
+}
+
+/* ==========================================================================
+   Choose Your Path Cards - Two Color Worlds
+   ========================================================================== */
+.path-card.card-nps {
+  background: var(--nps-pink-tint);
+  border-color: rgba(20, 163, 168, 0.25);
+}
+
+.path-card.card-nps .service-icon {
+  background: var(--nps-teal);
+  color: #fff;
+}
+
+.path-card.card-nps h3 {
+  color: var(--nps-teal);
+  font-weight: 800;
+}
+
+.path-card.card-nps .text-link {
+  color: var(--nps-magenta);
+  font-weight: 700;
+}
+
+.path-card.card-homeroom {
+  background: var(--nps-purple-light);
+  border-color: rgba(123, 44, 191, 0.25);
+}
+
+.path-card.card-homeroom .service-icon {
+  background: var(--nps-purple);
+  color: #fff;
+}
+
+.path-card.card-homeroom h3 {
+  color: var(--nps-purple);
+  font-weight: 800;
+}
+
+.path-card.card-homeroom .text-link {
+  color: var(--nps-purple);
+  font-weight: 700;
+}
+
+.path-card.card-coaching {
+  background: #FFFFFF;
+  border-color: var(--shell-sand);
+}
+
+.path-card.card-coaching .service-icon {
+  background: var(--shell-sand);
+  color: var(--shell-olive);
+}
+
+.path-card.card-coaching h3 {
+  color: var(--shell-black);
+  font-weight: 800;
+}
+
+.path-card.card-coaching .text-link {
+  color: var(--shell-olive);
+  font-weight: 700;
+}
+
+.path-card.card-rooted {
+  background: #FAF6F0;
+  border-color: rgba(107, 112, 70, 0.25);
+}
+
+.path-card.card-rooted .service-icon {
+  background: var(--rooted-olive);
+  color: #fff;
+}
+
+.path-card.card-rooted h3 {
+  color: var(--rooted-olive);
+  font-weight: 800;
+}
+
+.path-card.card-rooted .text-link {
+  color: var(--rooted-olive);
+  font-weight: 700;
+}
+
+/* World Badges */
+.world-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-bottom: 6px;
+  align-self: flex-start;
+}
+
+.badge-nps {
+  background: rgba(20, 163, 168, 0.15);
+  color: var(--nps-teal);
+}
+
+.badge-homeroom {
+  background: rgba(123, 44, 191, 0.15);
+  color: var(--nps-purple);
+}
+
+.badge-coaching {
+  background: rgba(91, 93, 70, 0.12);
+  color: var(--shell-olive);
+}
+
+.badge-rooted {
+  background: rgba(232, 196, 190, 0.45);
+  color: var(--rooted-olive);
+}
+
+/* ==========================================================================
+   Classroom & No Permission Slip World Theme
+   ========================================================================== */
+.nps-world {
+  background: #FDF9FB;
+}
+
+.nps-hero {
+  background: linear-gradient(135deg, #FDE4F0 0%, #FFF5F9 50%, #E8F8F8 100%);
+  padding: 120px 24px 60px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.nps-hero h1 {
+  color: var(--nps-teal);
+  font-size: clamp(34px, 4.5vw, 56px);
+  margin-bottom: 16px;
+}
+
+.nps-hero p {
+  color: #333;
+  font-size: clamp(16px, 2vw, 21px);
+  max-width: 680px;
+  margin: 0 auto 32px;
+}
+
+.permission-slip-stamp {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 2px dashed var(--nps-magenta);
+  color: var(--nps-magenta);
+  padding: 6px 16px;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transform: rotate(-2deg);
+  margin-bottom: 20px;
+  background: rgba(224, 33, 138, 0.05);
+}
+
+.btn-magenta {
+  background: var(--nps-magenta) !important;
+  color: #fff !important;
+  font-weight: 700;
+  padding: 14px 28px;
+  border-radius: 999px;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 4px 14px rgba(224, 33, 138, 0.3);
+  transition: all 0.25s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-magenta:hover {
+  background: #C21373 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(224, 33, 138, 0.4);
+}
+
+.btn-teal {
+  background: var(--nps-teal) !important;
+  color: #fff !important;
+  font-weight: 700;
+  padding: 14px 28px;
+  border-radius: 999px;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 4px 14px rgba(20, 163, 168, 0.3);
+  transition: all 0.25s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-teal:hover {
+  background: #0E7C80 !important;
+  transform: translateY(-2px);
+}
+
+.btn-purple {
+  background: var(--nps-purple) !important;
+  color: #fff !important;
+  font-weight: 700;
+  padding: 14px 28px;
+  border-radius: 999px;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 4px 14px rgba(123, 44, 191, 0.3);
+  transition: all 0.25s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-purple:hover {
+  background: #601A9E !important;
+  transform: translateY(-2px);
+}
+
+/* Homeroom Feature Block */
+.homeroom-pricing-box {
+  background: #fff;
+  border: 2px solid var(--nps-purple);
+  border-radius: 20px;
+  padding: 36px 32px;
+  box-shadow: 0 16px 40px rgba(123, 44, 191, 0.12);
+  text-align: center;
+  max-width: 540px;
+  margin: 32px auto;
+  position: relative;
+}
+
+.homeroom-founder-pill {
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--nps-magenta);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 6px 18px;
+  border-radius: 999px;
+  letter-spacing: 0.08em;
+  box-shadow: 0 4px 12px rgba(224, 33, 138, 0.3);
+}
+
+.homeroom-price {
+  font-size: 56px;
+  font-weight: 800;
+  color: var(--nps-purple);
+  line-height: 1;
+  margin: 16px 0 8px;
+}
+
+.homeroom-period {
+  font-size: 15px;
+  color: #666;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Pop Quiz Band (Bright) */
+.pop-quiz-band {
+  background: linear-gradient(135deg, var(--nps-teal) 0%, #0E7C80 100%);
+  color: #fff;
+  border-radius: 20px;
+  padding: 48px 36px;
+  text-align: center;
+  margin: 48px auto;
+  width: min(1200px, calc(100% - 48px));
+  box-shadow: 0 12px 36px rgba(20, 163, 168, 0.25);
+}
+
+.pop-quiz-band h2 {
+  color: #fff;
+  font-size: clamp(26px, 3.5vw, 38px);
+  margin-bottom: 12px;
+}
+
+.pop-quiz-band p {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 17px;
+  max-width: 640px;
+  margin: 0 auto 28px;
+}
+
+/* ==========================================================================
+   Rooted Women Collective World Theme
+   ========================================================================== */
+.rooted-world {
+  background: var(--rooted-cream);
+  color: var(--rooted-black);
+}
+
+.rooted-hero {
+  background: linear-gradient(180deg, #F7F1E8 0%, #EFE8DD 100%);
+  padding: 120px 24px 70px;
+  text-align: center;
+  position: relative;
+}
+
+.rooted-hero h1 {
+  color: var(--rooted-olive);
+  font-size: clamp(34px, 4.5vw, 54px);
+  margin-bottom: 16px;
+}
+
+.rooted-hero p {
+  color: var(--rooted-black);
+  font-size: clamp(16px, 2vw, 21px);
+  max-width: 680px;
+  margin: 0 auto 32px;
+}
+
+.btn-olive {
+  background: var(--rooted-olive) !important;
+  color: #fff !important;
+  font-weight: 700;
+  padding: 14px 28px;
+  border-radius: 999px;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 4px 14px rgba(107, 112, 70, 0.25);
+  transition: all 0.25s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-olive:hover {
+  background: #4E5233 !important;
+  transform: translateY(-2px);
+}
+
+/* Botanical Accent Card */
+.botanical-card {
+  background: #fff;
+  border: 1px solid var(--rooted-blush);
+  border-radius: 16px;
+  padding: 32px 28px;
+  box-shadow: 0 6px 24px rgba(107, 112, 70, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.botanical-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(107, 112, 70, 0.12);
+}
+
+/* ==========================================================================
+   1:1 Coaching 8-Week Timeline
+   ========================================================================== */
+.timeline-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  margin: 36px 0;
+}
+
+.timeline-phase {
+  background: #fff;
+  border: 1px solid var(--shell-sand);
+  border-radius: 16px;
+  padding: 24px 20px;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(46, 41, 38, 0.04);
+}
+
+.phase-number {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--shell-olive);
+  background: rgba(91, 93, 70, 0.1);
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+}
+
+.timeline-phase h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: var(--shell-black);
+}
+
+.phase-weeks {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--shell-rose-gold);
+  margin-bottom: 12px;
+}
+
+.phase-steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.phase-steps li {
+  padding: 8px 0;
+  border-top: 1px solid #f0ebe4;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.phase-steps li::before {
+  content: "→";
+  color: var(--shell-olive);
+  font-weight: 800;
+}
+
+/* ==========================================================================
+   Interactive Pop Quiz (No Permission Slip)
+   ========================================================================== */
+.quiz-container {
+  background: #fff;
+  border-radius: 20px;
+  border: 2px solid var(--nps-teal);
+  box-shadow: 0 16px 48px rgba(20, 163, 168, 0.1);
+  overflow: hidden;
+  max-width: 760px;
+  margin: 40px auto;
+  padding: 32px 28px;
+}
+
+.quiz-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.quiz-progress-track {
+  background: #E8F8F8;
+  height: 8px;
+  border-radius: 999px;
+  overflow: hidden;
+  margin: 16px 0 8px;
+}
+
+.quiz-progress-fill {
+  background: var(--nps-magenta);
+  height: 100%;
+  width: 12.5%;
+  transition: width 0.3s ease;
+}
+
+.quiz-option-btn {
+  width: 100%;
+  text-align: left;
+  padding: 16px 20px;
+  border: 1px solid #e2e8f0;
+  background: #fff;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #2D3748;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.quiz-option-btn:hover {
+  border-color: var(--nps-teal);
+  background: var(--nps-pink-tint);
+  transform: translateX(4px);
+}
+
+.quiz-option-btn.selected {
+  background: var(--nps-teal);
+  color: #fff;
+  border-color: var(--nps-teal);
+}
+
+.quiz-result-card {
+  text-align: center;
+  padding: 24px;
+}
+
+.quiz-era-stamp {
+  display: inline-block;
+  background: var(--nps-magenta);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 8px 20px;
+  border-radius: 999px;
+  letter-spacing: 0.1em;
+  margin-bottom: 16px;
+}
+
+/* ==========================================================================
+   Closing CTA Band & Footer
+   ========================================================================== */
+.closing-cta-band {
+  background: linear-gradient(135deg, var(--shell-black) 0%, #2A2624 100%);
+  color: #fff;
+  padding: 64px 24px;
+  text-align: center;
+  border-radius: 24px;
+  width: min(1200px, calc(100% - 48px));
+  margin: 60px auto;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+}
+
+.closing-cta-band h2 {
+  color: #fff;
+  font-size: clamp(28px, 4vw, 44px);
+  margin-bottom: 14px;
+}
+
+.closing-cta-band p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto 28px;
+}
+
+.site-footer {
+  background: #1A1A1A;
+  color: #F4EFE8;
+  padding: 64px 24px 32px;
+  margin-top: 60px;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  gap: 40px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+@media (max-width: 900px) {
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+.footer-brand h3 {
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 8px;
+  letter-spacing: 0.05em;
+}
+
+.footer-tagline {
+  color: var(--shell-taupe);
+  font-size: 14px;
+  font-style: italic;
+  margin-bottom: 16px;
+}
+
+.footer-location {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.footer-col h4 {
+  color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 16px;
+}
+
+.footer-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links-list li {
+  margin-bottom: 10px;
+}
+
+.footer-links-list a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.footer-links-list a:hover {
+  color: #fff;
+}
+
+.footer-signup p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.footer-signup-form {
+  display: flex;
+  gap: 8px;
+}
+
+.footer-signup-form input {
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-size: 13px;
+  flex: 1;
+}
+
+.footer-signup-form button {
+  background: var(--nps-magenta);
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.footer-signup-form button:hover {
+  background: #C21373;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 24px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-bottom a {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  margin-left: 16px;
+}
+
+.footer-bottom a:hover {
+  color: #fff;
+}
