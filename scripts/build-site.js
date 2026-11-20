@@ -14,7 +14,7 @@ async function build() {
     }
   }
 
-  for (const name of ['assets', 'media']) {
+  for (const name of ['assets', 'media', 'downloads']) {
     await fs.cp(path.join(root, name), path.join(output, name), { recursive: true });
   }
 

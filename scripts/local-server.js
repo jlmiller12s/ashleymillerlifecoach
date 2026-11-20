@@ -19,6 +19,7 @@ const mimeTypes = {
   '.json': 'application/json; charset=utf-8',
   '.mp4': 'video/mp4',
   '.png': 'image/png',
+  '.pdf': 'application/pdf',
   '.svg': 'image/svg+xml',
   '.webp': 'image/webp',
 };
@@ -27,10 +28,13 @@ const server = http.createServer(async (req, res) => {
   try {
     const pathname = new URL(req.url, `http://${req.headers.host}`).pathname;
 
+    if (pathname === '/api/freebies') return await require('../api/freebies')(req, res);
+
     const filePath = resolveStaticPath(pathname);
     const data = await fs.readFile(filePath);
     res.statusCode = 200;
     res.setHeader('Content-Type', mimeTypes[path.extname(filePath).toLowerCase()] || 'application/octet-stream');
+    if (pathname.startsWith('/downloads/')) res.setHeader('X-Robots-Tag', 'noindex, nofollow, noarchive');
     res.end(data);
   } catch (error) {
     res.statusCode = error.code === 'ENOENT' ? 404 : 500;

@@ -12,6 +12,7 @@
   <script src="assets/gsap-lite.js?v=ashley-lifecoach"></script>
   <script defer src="assets/site.js?v=ashley-lifecoach"></script>
   <script defer src="assets/ashley-site.js?v=ashley-lifecoach"></script>
+<script defer src="/assets/freebie-forms.js"></script>
 </head>
 
 <body class="nps-world">
@@ -56,13 +57,13 @@
 
         <!-- Dynamic Pricing Box -->
         <div class="homeroom-pricing-box">
-          <div class="homeroom-founder-pill" id="homeroom-pill">Founder Rate Available</div>
+          <div class="homeroom-founder-pill" id="homeroom-pill">Black Friday Special</div>
           <div style="font-size:14px; text-transform:uppercase; font-weight:800; color:var(--nps-teal); letter-spacing:0.08em;">
-            Founding Member Enrollment
+            Black Friday Special
           </div>
           <div class="homeroom-price" id="homeroom-price-value">$47</div>
           <div class="homeroom-period" id="homeroom-period-value">
-            full year access &middot; <strong style="color:var(--nps-magenta)">Founder rate through Nov 30, 2026</strong> (Reg. $97/yr)
+            full year access &middot; <strong style="color:var(--nps-magenta)">Black Friday Special through Nov 30, 2026</strong> (Reg. $97/yr)
           </div>
 
           <p style="font-size:14px; color:#555; line-height:1.5; margin-bottom:24px;">
@@ -173,6 +174,18 @@
         <a href="https://skool.com" target="_blank" rel="noopener" class="btn-purple" style="font-size:17px; padding:16px 36px;">Save My Seat in Homeroom</a>
       </div>
     </section>
+<section class="journey-section freebie-feature"><div class="section-heading"><span class="visual-label">A free first step</span><h2>Not ready for the full year? Start with 48 hours.</h2></div><article class="freebie-card" id="momentum-map">
+ <span class="permission-slip-stamp">Your next AssignMEANT · Free worksheet</span>
+ <h2>The 48-Hour Momentum Map</h2><p>Your next chapter starts with one small move. Make room for a 15-minute step, then build on it over the next 48 hours.</p>
+ <div data-freebie="momentum-map">
+ <form action="/api/freebies" method="post" class="freebie-form" aria-label="The 48-Hour Momentum Map signup">
+ <fieldset><label for="momentum-map-name">First name</label><input id="momentum-map-name" name="fields[name]" autocomplete="given-name" required>
+ <label for="momentum-map-email">Email address</label><input id="momentum-map-email" name="fields[email]" type="email" autocomplete="email" required>
+ <label class="freebie-consent"><input type="checkbox" name="consent" required> Send me this worksheet and Ashley’s encouraging follow-up emails. I can unsubscribe anytime.</label><div class="freebie-honeypot" aria-hidden="true"><label>Leave this blank<input name="website" tabindex="-1" autocomplete="off"></label></div><button class="btn-magenta" type="submit">Get the Map</button></fieldset>
+ <p class="freebie-status" role="status"></p>
+ </form></div>
+ <p class="freebie-note">Your worksheet arrives by email, followed by a few encouraging notes from Ashley. Unsubscribe anytime. <a href="/privacy">Privacy policy</a>.</p>
+ </article></section>
   </main>
 
   <!-- Footer -->
@@ -210,16 +223,11 @@
             <li><a href="/book">Book a Clarity Call</a></li>
             <li><a href="/contact">Contact Ashley</a></li>
             <li><a href="https://instagram.com/ashleymillerlifecoach" target="_blank" rel="noopener">Instagram @ashleymillerlifecoach</a></li>
-            <li><a href="mailto:hello@ashleymillerlifecoach.com">hello@ashleymillerlifecoach.com</a></li>
+            <li><a href="mailto:ashleymillerlifecoach@gmail.com">ashleymillerlifecoach@gmail.com</a></li>
           </ul>
         </div>
         <div class="footer-col footer-signup">
-          <h4>Free Guide</h4>
-          <p>Get "No Permission Slip Required" — five ways to stop waiting and start moving.</p>
-          <form class="footer-signup-form" action="/no-permission-slip" method="get">
-            <input type="email" placeholder="Your email" required>
-            <button type="submit">Grab</button>
-          </form>
+          <h4>Your free first step</h4><p>Make your next 48 hours count with the Momentum Map.</p><a class="btn-magenta" href="/no-permission-slip#momentum-map">Get the Map</a>
         </div>
       </div>
       <div class="footer-bottom">

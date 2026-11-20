@@ -49,8 +49,8 @@ function initHomeroomPricing() {
 
   if (now <= founderDeadline) {
     priceDisplay.textContent = '$47';
-    if (periodDisplay) periodDisplay.innerHTML = 'full year access &middot; <strong style="color:var(--nps-magenta)">Founder rate through Nov 30, 2026</strong>';
-    if (pillDisplay) pillDisplay.textContent = 'Founder Rate Available';
+    if (periodDisplay) periodDisplay.innerHTML = 'full year access &middot; <strong style="color:var(--nps-magenta)">Black Friday Special through Nov 30, 2026</strong>';
+    if (pillDisplay) pillDisplay.textContent = 'Black Friday Special';
   } else {
     priceDisplay.textContent = '$97';
     if (periodDisplay) periodDisplay.innerHTML = 'full year access &middot; Annual enrollment';

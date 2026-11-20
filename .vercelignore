@@ -1,0 +1,11 @@
+node_modules/
+.git/
+.vercel/
+.env*
+tmp/
+test/
+test-results/
+playwright-report/
+screenshots/
+public/
+*.md

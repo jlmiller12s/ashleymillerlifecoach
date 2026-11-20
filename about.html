@@ -12,6 +12,7 @@
   <script src="assets/gsap-lite.js?v=ashley-lifecoach"></script>
   <script defer src="assets/site.js?v=ashley-lifecoach"></script>
   <script defer src="assets/ashley-site.js?v=ashley-lifecoach"></script>
+<script defer src="/assets/freebie-forms.js"></script>
 </head>
 
 <body>
@@ -120,9 +121,9 @@
       </div>
       <div class="path-card-grid">
         <div style="padding:20px;">
-          <h3 style="color:var(--shell-olive); font-size:20px; margin-bottom:8px;">1. Coaching</h3>
+          <h3 style="color:var(--nps-purple); font-size:20px; margin-bottom:8px;">1. Coaching</h3>
           <p style="font-size:15px; color:#444; line-height:1.6;">Personal, high-touch strategy. From our 8-week 1:1 Next AssignMEANT Roadmap to the year-long Homeroom community calls, this is where we build the practical plan.</p>
-          <a href="/coaching" class="text-link" style="color:var(--shell-olive); font-weight:700;">Explore Coaching &rarr;</a>
+          <a href="/coaching" class="text-link" style="color:var(--nps-purple); font-weight:700;">Explore Coaching &rarr;</a>
         </div>
         <div style="padding:20px;">
           <h3 style="color:var(--rooted-olive); font-size:20px; margin-bottom:8px;">2. Community</h3>
@@ -140,7 +141,7 @@
     <!-- Photo Strip / Life Behind the Scenes -->
     <section class="journey-section" style="margin: 60px auto;">
       <div class="section-heading">
-        <span class="visual-label">Life in Lake Saint Louis</span>
+        <span class="visual-label">From Pivot to PURPOSE</span>
         <h2>Behind The Scenes</h2>
       </div>
       <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:16px;">
@@ -155,8 +156,20 @@
     <section class="closing-cta-band">
       <h2>Ready to stop waiting and start moving?</h2>
       <p>Let's spend 20 minutes together naming what God is doing and what your very next step should be.</p>
-      <a class="btn-olive" href="/book" style="background:#fff !important; color:var(--shell-black) !important; font-size:16px; padding:16px 36px;">Book a Free Clarity Call</a>
+      <a class="btn-olive" href="/book" style="background:var(--nps-purple) !important; color:#fff !important; font-size:16px; padding:16px 36px; box-shadow:0 8px 24px rgba(123,44,191,0.25);">Book a Free Clarity Call</a>
     </section>
+<section class="journey-section freebie-feature"><div class="section-heading"><span class="visual-label">A free first step</span><h2>You get to put some things down.</h2></div><article class="freebie-card" id="release-reclaim">
+ <span class="permission-slip-stamp">Your next AssignMEANT · Free worksheet</span>
+ <h2>The Release &amp; Reclaim Matrix</h2><p>You don’t have to carry it all into your next chapter. Make space to name what you’re releasing and what you’re reclaiming.</p>
+ <div data-freebie="release-reclaim">
+ <form action="/api/freebies" method="post" class="freebie-form" aria-label="The Release &amp; Reclaim Matrix signup">
+ <fieldset><label for="release-reclaim-name">First name</label><input id="release-reclaim-name" name="fields[name]" autocomplete="given-name" required>
+ <label for="release-reclaim-email">Email address</label><input id="release-reclaim-email" name="fields[email]" type="email" autocomplete="email" required>
+ <label class="freebie-consent"><input type="checkbox" name="consent" required> Send me this worksheet and Ashley’s encouraging follow-up emails. I can unsubscribe anytime.</label><div class="freebie-honeypot" aria-hidden="true"><label>Leave this blank<input name="website" tabindex="-1" autocomplete="off"></label></div><button class="btn-magenta" type="submit">Get the Matrix</button></fieldset>
+ <p class="freebie-status" role="status"></p>
+ </form></div>
+ <p class="freebie-note">Your worksheet arrives by email, followed by a few encouraging notes from Ashley. Unsubscribe anytime. <a href="/privacy">Privacy policy</a>.</p>
+ </article></section>
   </main>
 
   <!-- Footer -->
@@ -194,16 +207,11 @@
             <li><a href="/book">Book a Clarity Call</a></li>
             <li><a href="/contact">Contact Ashley</a></li>
             <li><a href="https://instagram.com/ashleymillerlifecoach" target="_blank" rel="noopener">Instagram @ashleymillerlifecoach</a></li>
-            <li><a href="mailto:hello@ashleymillerlifecoach.com">hello@ashleymillerlifecoach.com</a></li>
+            <li><a href="mailto:ashleymillerlifecoach@gmail.com">ashleymillerlifecoach@gmail.com</a></li>
           </ul>
         </div>
         <div class="footer-col footer-signup">
-          <h4>Free Guide</h4>
-          <p>Get "No Permission Slip Required" — five ways to stop waiting and start moving.</p>
-          <form class="footer-signup-form" action="/no-permission-slip" method="get">
-            <input type="email" placeholder="Your email" required>
-            <button type="submit">Grab</button>
-          </form>
+          <h4>Your free first step</h4><p>Make your next 48 hours count with the Momentum Map.</p><a class="btn-magenta" href="/no-permission-slip#momentum-map">Get the Map</a>
         </div>
       </div>
       <div class="footer-bottom">

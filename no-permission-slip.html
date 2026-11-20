@@ -12,6 +12,7 @@
   <script src="assets/gsap-lite.js?v=ashley-lifecoach"></script>
   <script defer src="assets/site.js?v=ashley-lifecoach"></script>
   <script defer src="assets/ashley-site.js?v=ashley-lifecoach"></script>
+<script defer src="/assets/freebie-forms.js"></script>
 </head>
 
 <body class="nps-world">
@@ -56,37 +57,29 @@
       </div>
     </section>
 
-    <!-- Two Main Hub Cards -->
-    <section class="journey-section" style="margin: 40px auto;">
-      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:24px;">
-        <!-- Card 1: Free Guide -->
-        <article class="botanical-card" style="border-color:var(--nps-teal); background:#fff; text-align:left;">
-          <span class="permission-slip-stamp" style="font-size:11px; margin-bottom:12px;">Free 48-Hour Action Planner</span>
-          <h2 style="font-size:26px; color:var(--nps-teal); margin-bottom:12px;">"No Permission Slip Required" Free Guide</h2>
-          <p style="font-size:15px; color:#4A5568; line-height:1.6; margin-bottom:20px;">
-            Five ways to stop waiting and start moving toward the life God put on your heart, plus our step-by-step 48-hour action planner.
-          </p>
-          <form style="display:flex; flex-direction:column; gap:10px;" onsubmit="event.preventDefault(); alert('Thank you! Your free guide has been sent to your email.');">
-            <input type="text" placeholder="Your first name" required style="padding:12px 16px; border-radius:8px; border:1px solid #CBD5E0; font-size:14px;">
-            <input type="email" placeholder="Your best email address" required style="padding:12px 16px; border-radius:8px; border:1px solid #CBD5E0; font-size:14px;">
-            <button type="submit" class="btn-magenta" style="width:100%; text-align:center; margin-top:4px;">Send Me the Guide &rarr;</button>
-          </form>
-          <div style="font-size:11px; color:#718096; margin-top:10px; text-align:center;">Delivered straight to your inbox via MailerLite. Zero spam.</div>
-        </article>
-
-        <!-- Card 2: Pop Quiz Teaser / Anchor -->
-        <article class="botanical-card" style="border-color:var(--nps-magenta); background:var(--nps-pink-tint); text-align:left;">
-          <span class="permission-slip-stamp" style="border-color:var(--nps-teal); color:var(--nps-teal); font-size:11px; margin-bottom:12px;">8-Question Reality Check</span>
-          <h2 style="font-size:26px; color:var(--nps-magenta); margin-bottom:12px;">Pop Quiz: What's Your Next AssignMEANT?</h2>
-          <p style="font-size:15px; color:#4A5568; line-height:1.6; margin-bottom:20px;">
-            Discover which of the four eras you are in right now: <em>Orientation, Clean Slate, Lesson Plan,</em> or <em>Field Trip</em>, and get Ashley's personal diagnosis.
-          </p>
-          <a href="#pop-quiz" class="btn-teal" style="display:block; text-align:center; padding:14px 20px;">Take the Pop Quiz Below &darr;</a>
-          <div style="font-size:11px; color:#718096; margin-top:14px; text-align:center;">Takes less than 3 minutes &bull; Instant personalized recommendations</div>
-        </article>
-      </div>
-    </section>
-
+<section class="journey-section freebie-grid" aria-label="Free worksheets"><article class="freebie-card" id="momentum-map">
+ <span class="permission-slip-stamp">Your next AssignMEANT · Free worksheet</span>
+ <h2>The 48-Hour Momentum Map</h2><p>Your next chapter starts with one small move. Make room for a 15-minute step, then build on it over the next 48 hours.</p>
+ <div data-freebie="momentum-map">
+ <form action="/api/freebies" method="post" class="freebie-form" aria-label="The 48-Hour Momentum Map signup">
+ <fieldset><label for="momentum-map-name">First name</label><input id="momentum-map-name" name="fields[name]" autocomplete="given-name" required>
+ <label for="momentum-map-email">Email address</label><input id="momentum-map-email" name="fields[email]" type="email" autocomplete="email" required>
+ <label class="freebie-consent"><input type="checkbox" name="consent" required> Send me this worksheet and Ashley’s encouraging follow-up emails. I can unsubscribe anytime.</label><div class="freebie-honeypot" aria-hidden="true"><label>Leave this blank<input name="website" tabindex="-1" autocomplete="off"></label></div><button class="btn-magenta" type="submit">Get the Map</button></fieldset>
+ <p class="freebie-status" role="status"></p>
+ </form></div>
+ <p class="freebie-note">Your worksheet arrives by email, followed by a few encouraging notes from Ashley. Unsubscribe anytime. <a href="/privacy">Privacy policy</a>.</p>
+ </article><article class="freebie-card" id="release-reclaim">
+ <span class="permission-slip-stamp">Your next AssignMEANT · Free worksheet</span>
+ <h2>The Release &amp; Reclaim Matrix</h2><p>You don’t have to carry it all into your next chapter. Make space to name what you’re releasing and what you’re reclaiming.</p>
+ <div data-freebie="release-reclaim">
+ <form action="/api/freebies" method="post" class="freebie-form" aria-label="The Release &amp; Reclaim Matrix signup">
+ <fieldset><label for="release-reclaim-name">First name</label><input id="release-reclaim-name" name="fields[name]" autocomplete="given-name" required>
+ <label for="release-reclaim-email">Email address</label><input id="release-reclaim-email" name="fields[email]" type="email" autocomplete="email" required>
+ <label class="freebie-consent"><input type="checkbox" name="consent" required> Send me this worksheet and Ashley’s encouraging follow-up emails. I can unsubscribe anytime.</label><div class="freebie-honeypot" aria-hidden="true"><label>Leave this blank<input name="website" tabindex="-1" autocomplete="off"></label></div><button class="btn-magenta" type="submit">Get the Matrix</button></fieldset>
+ <p class="freebie-status" role="status"></p>
+ </form></div>
+ <p class="freebie-note">Your worksheet arrives by email, followed by a few encouraging notes from Ashley. Unsubscribe anytime. <a href="/privacy">Privacy policy</a>.</p>
+ </article></section>
     <!-- Interactive Pop Quiz Section -->
     <section class="journey-section" id="pop-quiz" style="margin: 60px auto;">
       <div id="pop-quiz-app" class="quiz-container">
@@ -136,45 +129,13 @@
       </div>
     </section>
 
-    <!-- Extra Credit Section (Worksheets Grid) -->
-    <section class="journey-section" style="margin: 60px auto;">
-      <div class="section-heading">
-        <span class="visual-label" style="color:var(--nps-purple);">Printable Downloads</span>
-        <h2 style="color:var(--nps-purple);">Extra Credit Worksheets</h2>
-        <p>Simple, printable worksheets designed to help you organize your thoughts and execute in under 30 minutes.</p>
-      </div>
-
-      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:20px;">
-        <div style="background:#fff; border:1px solid #E2E8F0; border-radius:14px; padding:24px;">
-          <span style="font-size:11px; font-weight:800; color:var(--nps-teal); text-transform:uppercase;">Worksheet 01</span>
-          <h3 style="font-size:18px; color:#2D3748; margin:6px 0 10px;">The Next AssignMEANT Audit</h3>
-          <p style="font-size:13px; color:#718096; margin-bottom:16px;">A 15-minute diagnostic to identify where your energy is currently being stolen.</p>
-          <a href="#" class="btn-teal" style="font-size:13px; padding:8px 18px;" onclick="event.preventDefault(); alert('Downloading worksheet...');">Download PDF</a>
-        </div>
-
-        <div style="background:#fff; border:1px solid #E2E8F0; border-radius:14px; padding:24px;">
-          <span style="font-size:11px; font-weight:800; color:var(--nps-magenta); text-transform:uppercase;">Worksheet 02</span>
-          <h3 style="font-size:18px; color:#2D3748; margin:6px 0 10px;">The 48-Hour Momentum Map</h3>
-          <p style="font-size:13px; color:#718096; margin-bottom:16px;">Stop waiting for next Monday. Four micro-actions you can finish in 48 hours.</p>
-          <a href="#" class="btn-magenta" style="font-size:13px; padding:8px 18px;" onclick="event.preventDefault(); alert('Downloading worksheet...');">Download PDF</a>
-        </div>
-
-        <div style="background:#fff; border:1px solid #E2E8F0; border-radius:14px; padding:24px;">
-          <span style="font-size:11px; font-weight:800; color:var(--nps-purple); text-transform:uppercase;">Worksheet 03</span>
-          <h3 style="font-size:18px; color:#2D3748; margin:6px 0 10px;">Release &amp; Reclaim Matrix</h3>
-          <p style="font-size:13px; color:#718096; margin-bottom:16px;">What to lay down, what to delegate, and what God is asking you to carry forward.</p>
-          <a href="#" class="btn-purple" style="font-size:13px; padding:8px 18px;" onclick="event.preventDefault(); alert('Downloading worksheet...');">Download PDF</a>
-        </div>
-      </div>
-    </section>
-
     <!-- Bottom Band: Ready for More Than Homework? -->
-    <section class="closing-cta-band" style="background:linear-gradient(135deg, var(--nps-purple) 0%, #4B107A 100%);">
-      <h2>Ready for more than homework?</h2>
-      <p>Whether you're looking for weekly group accountability in Homeroom or an intensive 1:1 strategy sprint, your seat is waiting.</p>
+    <section class="closing-cta-band closing-teal" style="background:linear-gradient(135deg, var(--nps-teal) 0%, #0E7C80 100%) !important;">
+      <h2 style="color:#fff !important;">Ready for more than homework?</h2>
+      <p style="color:rgba(255,255,255,0.95) !important;">Whether you're looking for weekly group accountability in Homeroom or an intensive 1:1 strategy sprint, your seat is waiting.</p>
       <div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
         <a href="/homeroom" class="btn-magenta" style="font-size:16px; padding:16px 32px;">Explore Homeroom</a>
-        <a href="/book" class="btn-teal" style="font-size:16px; padding:16px 32px; background:#fff !important; color:var(--nps-purple) !important;">Book a Clarity Call</a>
+        <a href="/book" class="btn-teal" style="font-size:16px; padding:16px 32px; background:#fff !important; color:var(--nps-teal) !important;">Book a Clarity Call</a>
       </div>
     </section>
   </main>
@@ -214,16 +175,11 @@
             <li><a href="/book">Book a Clarity Call</a></li>
             <li><a href="/contact">Contact Ashley</a></li>
             <li><a href="https://instagram.com/ashleymillerlifecoach" target="_blank" rel="noopener">Instagram @ashleymillerlifecoach</a></li>
-            <li><a href="mailto:hello@ashleymillerlifecoach.com">hello@ashleymillerlifecoach.com</a></li>
+            <li><a href="mailto:ashleymillerlifecoach@gmail.com">ashleymillerlifecoach@gmail.com</a></li>
           </ul>
         </div>
         <div class="footer-col footer-signup">
-          <h4>Free Guide</h4>
-          <p>Get "No Permission Slip Required" — five ways to stop waiting and start moving.</p>
-          <form class="footer-signup-form" action="/no-permission-slip" method="get">
-            <input type="email" placeholder="Your email" required>
-            <button type="submit">Grab</button>
-          </form>
+          <h4>Your free first step</h4><p>Make your next 48 hours count with the Momentum Map.</p><a class="btn-magenta" href="/no-permission-slip#momentum-map">Get the Map</a>
         </div>
       </div>
       <div class="footer-bottom">
