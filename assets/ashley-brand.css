@@ -306,7 +306,7 @@ h1, h2, h3, h4, .serif-font {
   font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  transform: rotate(-2deg);
+  transform: none !important;
   margin-bottom: 20px;
   background: rgba(224, 33, 138, 0.05);
 }
